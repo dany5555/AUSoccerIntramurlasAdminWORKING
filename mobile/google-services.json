@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "754929275966",
+    "firebase_url": "https://mysigninappdemo.firebaseio.com",
+    "project_id": "mysigninappdemo",
+    "storage_bucket": "mysigninappdemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754929275966:android:f8d703d1d16b0a00",
+        "android_client_info": {
+          "package_name": "com.ausoccer.ausoccerintramurals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "754929275966-pc6ehimnr302cgrcfm2k8urepmanh7ff.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ausoccer.ausoccerintramurals",
+            "certificate_hash": "300a88a918bca5d265bcc917b22c2904a266c2c1"
+          }
+        },
+        {
+          "client_id": "754929275966-dosaj4gap834irg0o93fjdo58p3cgo06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-2J2YJ9WedQOcJWca22vLmF2ago__gCU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "754929275966-dosaj4gap834irg0o93fjdo58p3cgo06.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754929275966:android:62f511a7356191aa",
+        "android_client_info": {
+          "package_name": "com.ausoccer.ausoccerintramurlasadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "754929275966-ht3a3ltl0hgo29l232ulqk8o7q1q1d4f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ausoccer.ausoccerintramurlasadmin",
+            "certificate_hash": "300a88a918bca5d265bcc917b22c2904a266c2c1"
+          }
+        },
+        {
+          "client_id": "754929275966-dosaj4gap834irg0o93fjdo58p3cgo06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-2J2YJ9WedQOcJWca22vLmF2ago__gCU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "754929275966-dosaj4gap834irg0o93fjdo58p3cgo06.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
