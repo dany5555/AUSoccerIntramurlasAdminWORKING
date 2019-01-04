@@ -86,16 +86,27 @@
 
         </RelativeLayout>
 
-
-
-
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/spinner_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teams_container"
+        android:layout_marginTop="16dp"
+        android:text="Select round or match day:"/>
+    <Spinner
+        android:id="@+id/matchday_spinner"
+        android:layout_width="match_parent"
+        android:layout_below="@id/spinner_header"
+        android:layout_height="wrap_content">
+    </Spinner>
 
     <EditText
         android:id="@+id/match_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/teams_container"
+        android:layout_below="@id/matchday_spinner"
         android:layout_marginTop="16dp"
         android:hint="Match Number"/>
 
@@ -116,6 +127,7 @@
         android:layout_marginLeft="16dp"
         android:layout_toEndOf="@+id/select_date_button"
         android:layout_toRightOf="@id/select_date_button"
+        android:textAllCaps="true"
         android:text="TextView"
         android:textSize="20sp" />
 

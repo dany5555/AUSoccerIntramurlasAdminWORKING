@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,6 +35,14 @@ public class MatchesTabFragment extends Fragment {
     ArrayList<MatchesModel> matchday4ArrayList = new ArrayList<>();
     ArrayList<MatchesModel> matchday5ArrayList = new ArrayList<>();
     ArrayList<MatchesModel> matchday6ArrayList = new ArrayList<>();
+
+    String matchday_1 = "Matchday1";
+    String matchday_2 = "Matchday2";
+    String matchday_3 = "Matchday3";
+    String matchday_4 = "Matchday4";
+    String matchday_5 = "Matchday5";
+    String matchday_6 = "Matchday6";
+
 
 
 
@@ -103,6 +112,23 @@ public class MatchesTabFragment extends Fragment {
             }
         });
 
+        matchday1list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
+                matchesModel = new MatchesModel();
+                matchesModel = matchday1ArrayList.get(i);
+
+                //Intent intent = new Intent(getActivity(), *Name of activity for editing and managing selected match*);
+
+                String id = matchesModel.getMatchUid();
+
+                //intent.putExtra("id", id);
+                //intent.putExtra("matchday", matchday_1);
+                //startActivity(intent);
+
+            }
+        });
+
         matchday2.orderByChild("matchNumber").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -122,6 +148,23 @@ public class MatchesTabFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        matchday2list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
+                matchesModel = new MatchesModel();
+                matchesModel = matchday2ArrayList.get(i);
+
+                //Intent intent = new Intent(getActivity(), *Name of activity for editing and managing selected match*);
+
+                String id = matchesModel.getMatchUid();
+
+                //intent.putExtra("id", id);
+                //intent.putExtra("matchday", matchday_2);
+                //startActivity(intent);
 
             }
         });
@@ -149,6 +192,23 @@ public class MatchesTabFragment extends Fragment {
             }
         });
 
+        matchday3list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
+                matchesModel = new MatchesModel();
+                matchesModel = matchday3ArrayList.get(i);
+
+                //Intent intent = new Intent(getActivity(), *Name of activity for editing and managing selected match*);
+
+                String id = matchesModel.getMatchUid();
+
+                //intent.putExtra("id", id);
+                //intent.putExtra("matchday", matchday_3);
+                //startActivity(intent);
+
+            }
+        });
+
         matchday4.orderByChild("matchNumber").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -168,6 +228,23 @@ public class MatchesTabFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        matchday4list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
+                matchesModel = new MatchesModel();
+                matchesModel = matchday4ArrayList.get(i);
+
+                //Intent intent = new Intent(getActivity(), *Name of activity for editing and managing selected match*);
+
+                String id = matchesModel.getMatchUid();
+
+                //intent.putExtra("id", id);
+                //intent.putExtra("matchday", matchday_4);
+                //startActivity(intent);
 
             }
         });
@@ -195,6 +272,23 @@ public class MatchesTabFragment extends Fragment {
             }
         });
 
+        matchday5list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
+                matchesModel = new MatchesModel();
+                matchesModel = matchday5ArrayList.get(i);
+
+                //Intent intent = new Intent(getActivity(), *Name of activity for editing and managing selected match*);
+
+                String id = matchesModel.getMatchUid();
+
+                //intent.putExtra("id", id);
+                //intent.putExtra("matchday", matchday_5);
+                //startActivity(intent);
+
+            }
+        });
+
         matchday6.orderByChild("matchNumber").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -214,6 +308,23 @@ public class MatchesTabFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        matchday6list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
+                matchesModel = new MatchesModel();
+                matchesModel = matchday6ArrayList.get(i);
+
+                //Intent intent = new Intent(getActivity(), *Name of activity for editing and managing selected match*);
+
+                String id = matchesModel.getMatchUid();
+
+                //intent.putExtra("id", id);
+                //intent.putExtra("matchday", matchday_6);
+                //startActivity(intent);
 
             }
         });
