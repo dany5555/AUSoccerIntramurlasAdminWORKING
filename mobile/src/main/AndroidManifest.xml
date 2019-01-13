@@ -18,10 +18,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddMatchActivity"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".HomeActivity"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".AddMatchActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".MatchControlActivity"
+            android:theme="@style/AppTheme">
+
+        </activity>
     </application>
 
 </manifest>

@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MatchControlActivity">
+
+    <RelativeLayout
+        android:id="@+id/match_data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/colorSecondaryLight">
+
+        <RelativeLayout
+            android:id="@+id/home_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp">
+
+            <ImageView
+                android:id="@+id/home_team_logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/empty_team_logo" />
+
+            <TextView
+                android:id="@+id/home_team_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_team_logo"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="Barcelona"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/home_player_goals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_team_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"/>
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/match_info_layout_not_played"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/not_played_match_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MATCH"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/not_played_match_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/not_played_match_number"
+                android:layout_marginTop="5dp"
+                android:text="WED SEP 05"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/not_played_match_date"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/line"
+                android:tint="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/not_played_match_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="7:00 PM"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/match_info_layout_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/live_match_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MATCH 1"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/live_result_cardview"
+                app:contentPadding="5dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/live_match_number"
+                app:cardBackgroundColor="@color/colorPrimaryDark">
+
+                <TextView
+                    android:id="@+id/live_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 - 0"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/live_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/live_result_cardview"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:text="HALF TIME"
+                android:textColor="@color/black" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/away_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp">
+
+            <ImageView
+                android:id="@+id/away_team_logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/empty_team_logo" />
+
+            <TextView
+                android:id="@+id/away_team_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/away_team_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Manchester City"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/away_player_goals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/away_team_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/match_data_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/game_status_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorAccent"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/game_status_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Game Status"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:id="@+id/stop_watch_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/game_status_textview"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="30sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/timer_buttons_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/timer"
+                        android:layout_centerHorizontal="true">
+
+                        <Button
+                            android:id="@+id/lineups_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="0dp"
+                            android:text="LINEUPS"/>
+
+                        <Button
+                            android:id="@+id/first_half_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/lineups_button"
+                            android:text="FIRST HALF" />
+
+                        <Button
+                            android:id="@+id/half_time_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/first_half_button"
+                            android:text="HALF TIME" />
+
+                        <Button
+                            android:id="@+id/second_half_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/half_time_button"
+                            android:text="SECOND HALF" />
+
+                        <Button
+                            android:id="@+id/final_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/second_half_button"
+                            android:text="FINAL" />
+
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/attacking_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/game_status_layout"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorAccent"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/game_events_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="ATTACKING"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/goals_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/game_events_textview"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="GOALS"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/home_goals_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/goals_textview"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/home_goals_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/home_decrease_goal_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/home_goals_textview"
+                        android:padding="0dp"
+                        android:text="-" />
+
+                    <Button
+                        android:id="@+id/home_increase_goal_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/home_decrease_goal_button"
+                        android:layout_toRightOf="@id/home_decrease_goal_button"
+                        android:padding="0dp"
+                        android:text="+" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/away_goals_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/goals_textview"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/away_goals_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/away_decrease_goal_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/away_goals_textview"
+                        android:padding="0dp"
+                        android:text="-" />
+
+                    <Button
+                        android:id="@+id/away_increase_goal_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/away_decrease_goal_button"
+                        android:layout_toRightOf="@id/away_decrease_goal_button"
+                        android:padding="0dp"
+                        android:text="+" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/corners_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_goals_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="CORNERS"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/home_corners_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/corners_textview"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/home_corners_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/home_decrease_corners_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/home_corners_textview"
+                        android:padding="0dp"
+                        android:text="-" />
+
+                    <Button
+                        android:id="@+id/home_increase_corners_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/home_decrease_corners_button"
+                        android:layout_toRightOf="@+id/home_decrease_corners_button"
+                        android:padding="0dp"
+                        android:text="+" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/away_corners_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/corners_textview"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/away_corners_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/away_decrease_corners_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/away_corners_textview"
+                        android:padding="0dp"
+                        android:text="-" />
+
+                    <Button
+                        android:id="@+id/away_increase_corners_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/away_decrease_corners_button"
+                        android:layout_toRightOf="@+id/away_decrease_corners_button"
+                        android:padding="0dp"
+                        android:text="+" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/off_sides_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_corners_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="OFF SIDES"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/home_off_sides_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/off_sides_textview"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/home_off_sides_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/home_decrease_off_sides_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/home_off_sides_textview"
+                        android:padding="0dp"
+                        android:text="-" />
+
+                    <Button
+                        android:id="@+id/home_increase_off_sides_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/home_decrease_off_sides_button"
+                        android:layout_toRightOf="@+id/home_decrease_off_sides_button"
+                        android:padding="0dp"
+                        android:text="+" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/away_off_sides_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/off_sides_textview"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/away_off_sides_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/away_decrease_off_sides_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/away_off_sides_textview"
+                        android:padding="0dp"
+                        android:text="-" />
+
+                    <Button
+                        android:id="@+id/away_increase_off_sides_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/away_decrease_off_sides_button"
+                        android:layout_toRightOf="@+id/away_decrease_off_sides_button"
+                        android:padding="0dp"
+                        android:text="+" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/disciplinary_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/attacking_layout"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorAccent"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/disciplinary_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="DISCIPLINARY"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/yellow_cards_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/disciplinary_textview"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="YELLOW CARDS"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/home_yellow_cards_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/yellow_cards_textview"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/home_yellow_cards_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/home_decrease_yellow_cards_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/home_yellow_cards_textview"
+                        android:padding="0dp"
+                        android:text="-" />
+
+                    <Button
+                        android:id="@+id/home_increase_yellow_cards_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/home_decrease_yellow_cards_button"
+                        android:layout_toRightOf="@+id/home_decrease_yellow_cards_button"
+                        android:padding="0dp"
+                        android:text="+" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/away_yellow_cards_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/yellow_cards_textview"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/away_yellow_cards_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/away_decrease_yellow_cards_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/away_yellow_cards_textview"
+                        android:padding="0dp"
+                        android:text="-" />
+
+                    <Button
+                        android:id="@+id/away_increase_yellow_cards_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/away_decrease_yellow_cards_button"
+                        android:layout_toRightOf="@+id/away_decrease_yellow_cards_button"
+                        android:padding="0dp"
+                        android:text="+" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/red_cards_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_yellow_cards_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="RED CARDS"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/home_red_cards_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/red_cards_textview"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/home_red_cards_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/home_decrease_red_cards_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/home_red_cards_textview"
+                        android:padding="0dp"
+                        android:text="-" />
+
+                    <Button
+                        android:id="@+id/home_increase_red_cards_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/home_decrease_red_cards_button"
+                        android:layout_toRightOf="@+id/home_decrease_red_cards_button"
+                        android:padding="0dp"
+                        android:text="+" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/away_red_cards_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/red_cards_textview"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/away_red_cards_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/away_decrease_red_cards_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/away_red_cards_textview"
+                        android:padding="0dp"
+                        android:text="-" />
+
+                    <Button
+                        android:id="@+id/away_increase_red_cards_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/away_decrease_red_cards_button"
+                        android:layout_toRightOf="@+id/away_decrease_red_cards_button"
+                        android:padding="0dp"
+                        android:text="+" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/fouls_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_red_cards_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="FOULS COMMITED"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/home_fouls_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fouls_textview"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/home_fouls_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/home_decrease_fouls_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/home_fouls_textview"
+                        android:padding="0dp"
+                        android:text="-" />
+
+                    <Button
+                        android:id="@+id/home_increase_fouls_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/home_decrease_fouls_button"
+                        android:layout_toRightOf="@+id/home_decrease_fouls_button"
+                        android:padding="0dp"
+                        android:text="+" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/away_fouls_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/fouls_textview"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/away_fouls_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/away_decrease_fouls_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/away_fouls_textview"
+                        android:padding="0dp"
+                        android:text="-" />
+
+                    <Button
+                        android:id="@+id/away_increase_fouls_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/away_decrease_fouls_button"
+                        android:layout_toRightOf="@+id/away_decrease_fouls_button"
+                        android:padding="0dp"
+                        android:text="+" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

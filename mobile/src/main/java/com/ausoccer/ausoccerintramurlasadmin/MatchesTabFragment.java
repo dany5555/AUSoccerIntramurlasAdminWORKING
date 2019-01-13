@@ -118,13 +118,13 @@ public class MatchesTabFragment extends Fragment {
                 matchesModel = new MatchesModel();
                 matchesModel = matchday1ArrayList.get(i);
 
-                //Intent intent = new Intent(getActivity(), *Name of activity for editing and managing selected match*);
+                Intent intent = new Intent(getActivity(), MatchControlActivity.class);
 
                 String id = matchesModel.getMatchUid();
 
-                //intent.putExtra("id", id);
-                //intent.putExtra("matchday", matchday_1);
-                //startActivity(intent);
+                intent.putExtra("id", id);
+                intent.putExtra("matchday", matchday_1);
+                startActivity(intent);
 
             }
         });
