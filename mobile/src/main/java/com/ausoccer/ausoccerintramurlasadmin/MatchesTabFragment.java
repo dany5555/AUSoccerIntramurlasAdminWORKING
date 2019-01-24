@@ -158,13 +158,13 @@ public class MatchesTabFragment extends Fragment {
                 matchesModel = new MatchesModel();
                 matchesModel = matchday2ArrayList.get(i);
 
-                //Intent intent = new Intent(getActivity(), *Name of activity for editing and managing selected match*);
+                Intent intent = new Intent(getActivity(), MatchControlActivity.class);
 
                 String id = matchesModel.getMatchUid();
 
-                //intent.putExtra("id", id);
-                //intent.putExtra("matchday", matchday_2);
-                //startActivity(intent);
+                intent.putExtra("id", id);
+                intent.putExtra("matchday", matchday_2);
+                startActivity(intent);
 
             }
         });
@@ -198,13 +198,13 @@ public class MatchesTabFragment extends Fragment {
                 matchesModel = new MatchesModel();
                 matchesModel = matchday3ArrayList.get(i);
 
-                //Intent intent = new Intent(getActivity(), *Name of activity for editing and managing selected match*);
+                Intent intent = new Intent(getActivity(), MatchControlActivity.class);
 
                 String id = matchesModel.getMatchUid();
 
-                //intent.putExtra("id", id);
-                //intent.putExtra("matchday", matchday_3);
-                //startActivity(intent);
+                intent.putExtra("id", id);
+                intent.putExtra("matchday", matchday_3);
+                startActivity(intent);
 
             }
         });
@@ -238,13 +238,13 @@ public class MatchesTabFragment extends Fragment {
                 matchesModel = new MatchesModel();
                 matchesModel = matchday4ArrayList.get(i);
 
-                //Intent intent = new Intent(getActivity(), *Name of activity for editing and managing selected match*);
+                Intent intent = new Intent(getActivity(), MatchControlActivity.class);
 
                 String id = matchesModel.getMatchUid();
 
-                //intent.putExtra("id", id);
-                //intent.putExtra("matchday", matchday_4);
-                //startActivity(intent);
+                intent.putExtra("id", id);
+                intent.putExtra("matchday", matchday_4);
+                startActivity(intent);
 
             }
         });
@@ -278,13 +278,13 @@ public class MatchesTabFragment extends Fragment {
                 matchesModel = new MatchesModel();
                 matchesModel = matchday5ArrayList.get(i);
 
-                //Intent intent = new Intent(getActivity(), *Name of activity for editing and managing selected match*);
+                Intent intent = new Intent(getActivity(), MatchControlActivity.class);
 
                 String id = matchesModel.getMatchUid();
 
-                //intent.putExtra("id", id);
-                //intent.putExtra("matchday", matchday_5);
-                //startActivity(intent);
+                intent.putExtra("id", id);
+                intent.putExtra("matchday", matchday_5);
+                startActivity(intent);
 
             }
         });
@@ -318,13 +318,13 @@ public class MatchesTabFragment extends Fragment {
                 matchesModel = new MatchesModel();
                 matchesModel = matchday6ArrayList.get(i);
 
-                //Intent intent = new Intent(getActivity(), *Name of activity for editing and managing selected match*);
+                Intent intent = new Intent(getActivity(), MatchControlActivity.class);
 
                 String id = matchesModel.getMatchUid();
 
-                //intent.putExtra("id", id);
-                //intent.putExtra("matchday", matchday_6);
-                //startActivity(intent);
+                intent.putExtra("id", id);
+                intent.putExtra("matchday", matchday_6);
+                startActivity(intent);
 
             }
         });
