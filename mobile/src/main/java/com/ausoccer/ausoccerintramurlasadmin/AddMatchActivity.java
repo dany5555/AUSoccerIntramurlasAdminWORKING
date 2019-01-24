@@ -72,12 +72,27 @@ public class AddMatchActivity extends AppCompatActivity implements AdapterView.O
         selectTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int hour = calendar.get(Calendar.HOUR_OF_DAY);
-                int minutes = calendar.get(Calendar.MINUTE);
+                 int hour = calendar.get(Calendar.HOUR_OF_DAY);
+                 int minutes = calendar.get(Calendar.MINUTE);
                 timePickerDialog = new TimePickerDialog(AddMatchActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        selectedTime.setText(hourOfDay + ":" + minute);
+                        String hour;
+                        String minutes;
+
+                        if (hourOfDay < 10) {
+                            hour = "0" + hourOfDay;
+                        } else {
+                            hour = String.valueOf(hourOfDay);
+                        }
+
+                        if (minute < 10) {
+                            minutes = "0" + minute;
+                        } else {
+                            minutes = String.valueOf(minute);
+                        }
+
+                        selectedTime.setText(hour + ":" + minutes);
                     }
                 }, hour, minutes, false);
 
