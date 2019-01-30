@@ -1,8 +1,10 @@
 package com.ausoccer.ausoccerintramurlasadmin;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,6 +34,9 @@ import java.util.Locale;
 
 public class AddMatchActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    TextView homeTeamName;
+    TextView awayTeamName;
+
     Calendar calendar = Calendar.getInstance();
     TimePickerDialog timePickerDialog;
     TextView selectedDate, selectedTime;
@@ -41,13 +46,34 @@ public class AddMatchActivity extends AppCompatActivity implements AdapterView.O
     EditText matchMumber;
     Spinner selectMatchday;
     List<String > matchdayList = new ArrayList<>();
+    String[] teamsList;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference matchdaysRef = database.getReference().child("Matches");
+    DatabaseReference teamsRef = database.getReference().child("Teams");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_match);
+
+        homeTeamName = findViewById(R.id.home_team_name);
+        awayTeamName = findViewById(R.id.away_team_name);
+
+        homeTeamName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AddMatchActivity.this);
+                builder.setTitle("Select Home Team");
+                builder.setSingleChoiceItems(teamsList, -1, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                    }
+                });
+
+            }
+        });
 
 
         selectedDate = findViewById(R.id.selected_date);
@@ -134,6 +160,8 @@ public class AddMatchActivity extends AppCompatActivity implements AdapterView.O
 
             }
         });
+
+
 
 
 
