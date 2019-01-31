@@ -73,7 +73,7 @@
                 android:src="@drawable/empty_team_logo"/>
 
             <TextView
-                android:id="@+id/awayteam_name"
+                android:id="@+id/away_team_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/away_team_logo"
@@ -103,10 +103,18 @@
     </Spinner>
 
     <EditText
-        android:id="@+id/match_number"
+        android:id="@+id/match_day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/matchday_spinner"
+        android:layout_marginTop="16dp"
+        android:hint="Match Day"/>
+
+    <EditText
+        android:id="@+id/match_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/match_day"
         android:layout_marginTop="16dp"
         android:hint="Match Number"/>
 
