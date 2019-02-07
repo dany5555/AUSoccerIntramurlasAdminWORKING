@@ -1,12 +1,14 @@
 package com.ausoccer.ausoccerintramurlasadmin;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridLayout;
 import android.widget.GridView;
 
@@ -62,6 +64,20 @@ public class TeamsTabFragment extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                teamsModel = new TeamsModel();
+                teamsModel = teamsModelArrayList.get(i);
+
+                Intent intent = new Intent(getActivity(), EditTeamsActivity.class);
+
+                String teamUid = teamsModel.getTeamUid();
+                intent.putExtra("teamUid", teamUid);
+                startActivity(intent);
             }
         });
 
