@@ -117,6 +117,126 @@
                 android:layout_below="@id/matchday6_header"
                 android:layout_marginTop="16dp" />
 
+            <TextView
+                android:id="@+id/matchday7_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchday6_list"
+                android:text="MATCHDAY 7"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.ausoccer.ausoccerintramurlasadmin.CustomListView
+                android:id="@+id/matchday7_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchday7_header"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/matchday8_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchday7_list"
+                android:text="MATCHDAY 8"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.ausoccer.ausoccerintramurlasadmin.CustomListView
+                android:id="@+id/matchday8_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchday8_header"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/matchday9_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchday8_list"
+                android:text="MATCHDAY 9"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.ausoccer.ausoccerintramurlasadmin.CustomListView
+                android:id="@+id/matchday9_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchday9_header"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/matchday10_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchday9_list"
+                android:text="MATCHDAY 10"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.ausoccer.ausoccerintramurlasadmin.CustomListView
+                android:id="@+id/matchday10_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchday10_header"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/matchday11_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchday10_list"
+                android:text="MATCHDAY 11"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.ausoccer.ausoccerintramurlasadmin.CustomListView
+                android:id="@+id/matchday11_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchday11_header"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/matchday12_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchday11_list"
+                android:text="MATCHDAY 12"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.ausoccer.ausoccerintramurlasadmin.CustomListView
+                android:id="@+id/matchday12_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchday12_header"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/matchday13_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchday12_list"
+                android:text="MATCHDAY 13"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.ausoccer.ausoccerintramurlasadmin.CustomListView
+                android:id="@+id/matchday13_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchday13_header"
+                android:layout_marginTop="16dp" />
+
+
 
         </RelativeLayout>
 
